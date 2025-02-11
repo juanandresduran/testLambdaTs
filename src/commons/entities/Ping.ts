@@ -10,4 +10,8 @@ export class Ping extends BaseEntity {
 
     @Column({ name: 'CREATION_DATE', type: 'datetime' })
     creationDate: Date;
+
+    static getPings(){
+        return this.createQueryBuilder('ping').getMany();
+    }
 }

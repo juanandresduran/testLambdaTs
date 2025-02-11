@@ -26,7 +26,6 @@ export async function getConnection(){
         }else{
             console.log('connection succesfully recycled');
         }
-    
         return connection;
     }catch(e){
         console.log("🚀 ~ getConnection ~ e:", e)
