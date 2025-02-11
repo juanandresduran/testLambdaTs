@@ -12,5 +12,11 @@ export class TestLambdaTsStack extends cdk.Stack {
       entry: 'lambda/index.ts', // Ruta al código de la Lambda
       handler: 'handler', // Nombre del método exportado
     });
+
+    const myLambda2 = new nodejsLambda.NodejsFunction(this, 'MyLambda2', {
+      runtime: lambda.Runtime.NODEJS_20_X,
+      entry: 'src/functions/funtion1.ts', // Ruta al código de la Lambda
+      handler: 'handler', // Nombre del método exportado
+    });
   }
 }

@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import * as cdk from 'aws-cdk-lib';
-import { TestLambdaTsStack } from '../lib/test_lambda_ts-stack';
+import { TestLambdaTsStack } from '../infrastructure/lib/test_lambda_ts-stack';
 
 const app = new cdk.App();
 new TestLambdaTsStack(app, 'TestLambdaTsStack', {
